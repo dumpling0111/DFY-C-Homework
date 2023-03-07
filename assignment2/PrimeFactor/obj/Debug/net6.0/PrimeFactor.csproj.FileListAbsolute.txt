@@ -1,0 +1,15 @@
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.csproj.AssemblyReference.cache
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.GeneratedMSBuildEditorConfig.editorconfig
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.AssemblyInfoInputs.cache
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.AssemblyInfo.cs
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.csproj.CoreCompileInputs.cache
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\bin\Debug\net6.0\PrimeFactor.exe
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\bin\Debug\net6.0\PrimeFactor.deps.json
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\bin\Debug\net6.0\PrimeFactor.runtimeconfig.json
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\bin\Debug\net6.0\PrimeFactor.dll
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\bin\Debug\net6.0\PrimeFactor.pdb
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.dll
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\refint\PrimeFactor.dll
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.pdb
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\PrimeFactor.genruntimeconfig.cache
+D:\大学资料\软件构造基础\DotNetAssignmment\assignment2\PrimeFactor\obj\Debug\net6.0\ref\PrimeFactor.dll

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeFactor", "PrimeFactor\PrimeFactor.csproj", "{29E10FA0-3FFB-46FB-A9EF-B7B9814A41A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayCaculate", "ArrayCaculate\ArrayCaculate.csproj", "{C90E9210-5D6D-43C0-89BC-DF55D0D8A9F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EratosthenesMethod", "EratosthenesMethod\EratosthenesMethod.csproj", "{714E35A4-9ACA-4359-B22E-D542F1900617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToplitzMatrix", "ToplitzMatrix\ToplitzMatrix.csproj", "{FA28914D-2DA5-4EEA-89B7-6D6B42267268}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29E10FA0-3FFB-46FB-A9EF-B7B9814A41A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E10FA0-3FFB-46FB-A9EF-B7B9814A41A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E10FA0-3FFB-46FB-A9EF-B7B9814A41A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E10FA0-3FFB-46FB-A9EF-B7B9814A41A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C90E9210-5D6D-43C0-89BC-DF55D0D8A9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C90E9210-5D6D-43C0-89BC-DF55D0D8A9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C90E9210-5D6D-43C0-89BC-DF55D0D8A9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C90E9210-5D6D-43C0-89BC-DF55D0D8A9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{714E35A4-9ACA-4359-B22E-D542F1900617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{714E35A4-9ACA-4359-B22E-D542F1900617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{714E35A4-9ACA-4359-B22E-D542F1900617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{714E35A4-9ACA-4359-B22E-D542F1900617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA28914D-2DA5-4EEA-89B7-6D6B42267268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA28914D-2DA5-4EEA-89B7-6D6B42267268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA28914D-2DA5-4EEA-89B7-6D6B42267268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA28914D-2DA5-4EEA-89B7-6D6B42267268}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53FAD79D-B3E7-40B3-878A-E2D2791AF755}
+	EndGlobalSection
+EndGlobal
