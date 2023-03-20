@@ -24,7 +24,6 @@ namespace clock{
             try
             {
                 datetime = Convert.ToDateTime(clockTime);
-                //datetime = DateTime.Now.AddSeconds(5);
                 clock.SetAlarmTime(datetime);
                 clock.Start();
             }catch (Exception e)
