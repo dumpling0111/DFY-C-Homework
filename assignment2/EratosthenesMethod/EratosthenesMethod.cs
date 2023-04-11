@@ -16,6 +16,8 @@ public class EratosthenesMethod {
     public static void eMethod(ref int []num)
     {
         //num[i]=1时表示i不为素数
+        //i=2;i*i<primes.length
+        //j=i*i;j<primes.length;j+=i
         for(int i = 0; i<=100; i++)
         {
             if (i == 0 || i == 1) num[i] = 1;

@@ -1,32 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Xml.Serialization;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace OrderManagementSystem
+namespace OrderServiceWinForm
 {
-
-    public class OrderService {
+    public class OrderService
+    {
 
 
         private readonly List<Order> orders = new List<Order>();
 
-        public OrderService() {
+        public OrderService()
+        {
         }
 
         //添加订单
-        public void AddOrder(Order order) {
-            if (orders.Contains(order)) {
-                throw new ApplicationException($"the order {order.Id} already exists!");
+        public void AddOrder(Order order)
+        {
+            if (orders.Contains(order))
+            {
+                //throw new ApplicationException($"the order {order.Id} already exists!");
             }
             orders.Add(order);
         }
 
         //更新订单
-        public void Update(Order order) {
+        public void Update(Order order)
+        {
             int idx = orders.FindIndex(o => o.Id == order.Id);
-            if (idx < 0) {
+            if (idx < 0)
+            {
                 throw new ApplicationException($"the order {order.Id} doesn't exist!");
             }
             orders.RemoveAt(idx);
@@ -34,14 +39,17 @@ namespace OrderManagementSystem
         }
 
         //根据Id查询订单
-        public Order GetById(int orderId) {
+        public Order GetById(int orderId)
+        {
             return orders.FirstOrDefault(o => o.Id == orderId);
         }
 
         //根据Id删除订单
-        public void RemoveOrder(int orderId) {
-            int idx=orders.FindIndex(o => o.Id == orderId);
-            if (idx >= 0) {
+        public void RemoveOrder(int orderId)
+        {
+            int idx = orders.FindIndex(o => o.Id == orderId);
+            if (idx >= 0)
+            {
                 orders.RemoveAt(idx);
             }
             /**
@@ -50,20 +58,23 @@ namespace OrderManagementSystem
         }
 
         //查询所有订单
-        public List<Order> QueryAll() {
+        public List<Order> QueryAll()
+        {
             return orders;
         }
 
         //根据客户名查询
-        public List<Order> QueryByCustomerName(string customerName) {
+        public List<Order> QueryByCustomerName(string customerName)
+        {
             var query = orders
-                .Where(o => o.Customer.Name == customerName)
+                .Where(o => o.getCustomerName() == customerName)
                 .OrderBy(o => o.TotalPrice);
             return query.ToList();
         }
 
         //根据货物名查询
-        public List<Order> QueryByGoodsName(string goodsName) {
+        public List<Order> QueryByGoodsName(string goodsName)
+        {
             var query = orders.Where(
               o => o.Details.Any(d => d.Goods.Name == goodsName))
                 .OrderBy(o => o.TotalPrice);
@@ -85,7 +96,8 @@ namespace OrderManagementSystem
         }
 
         //根据总价查询
-        public List<Order> QueryByTotalPrice(float totalPrice) {
+        public List<Order> QueryByTotalPrice(float totalPrice)
+        {
             var query = orders.Where(o => o.TotalPrice >= totalPrice)
                 .OrderBy(o => o.TotalPrice);
             return query.ToList();
@@ -93,13 +105,20 @@ namespace OrderManagementSystem
 
 
         //对orders中的数据进行排序
-        public void Sort(Comparison<Order> comparison) {
+        public void Sort(Comparison<Order> comparison)
+        {
             orders.Sort(comparison);
         }
 
         //根据传入的条件进行查询
-        public IEnumerable<Order> Query(Predicate<Order> condition) {
-            return orders.Where(o => condition(o)).OrderBy(o=>o.TotalPrice);
+        public IEnumerable<Order> Query(Predicate<Order> condition)
+        {
+            return orders.Where(o => condition(o)).OrderBy(o => o.TotalPrice);
+        }
+        //查询所有订单
+        public List<Order> GetAllOrders()
+        {
+            return orders;
         }
 
     }

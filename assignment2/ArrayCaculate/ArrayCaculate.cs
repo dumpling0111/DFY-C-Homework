@@ -18,6 +18,8 @@ public class ArrayCaculate {
         }
         
     }
+
+    //out 类型的输出
     public static double[] inputArray(){
         try
         {

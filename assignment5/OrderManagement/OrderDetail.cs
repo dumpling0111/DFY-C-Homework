@@ -1,43 +1,41 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace OrderManagementSystem
 {
-    class OrderDetail : IEquatable<OrderDetail>
-    {
-        public string ItemName { get; set; }
-        public int Quantity { get; set; }
-        public double UnitPrice { get; set; }
 
-        public OrderDetail(string itemName, int quantity, double unitPrice)
-        {
-            ItemName = itemName;
-            Quantity = quantity;
-            UnitPrice = unitPrice;
-        }
+  public class OrderDetail {
 
-        public bool Equals(OrderDetail other)
-        {
-            if (other is null)
-            {
-                return false;
-            }
+    public Goods Goods { get; set; }
 
-            return ItemName == other.ItemName && Quantity == other.Quantity && UnitPrice == other.UnitPrice;
-        }
+    public int Quantity { get; set; }
 
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as OrderDetail);
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(ItemName, Quantity, UnitPrice);
-        }
-
-        public override string ToString()
-        {
-            return $"ItemName: {ItemName}, Quantity: {Quantity}, UnitPrice: {UnitPrice}";
-        }
+    public float TotalPrice {
+      get => Goods.Price * Quantity;
     }
+
+    public OrderDetail() {}
+
+    public OrderDetail(Goods goods, int quantity) {
+      this.Goods = goods;
+      this.Quantity = quantity;
+    }
+
+    public override bool Equals(object obj) {
+      var detail = obj as OrderDetail;
+      return detail != null &&
+             EqualityComparer<Goods>.Default.Equals(Goods, detail.Goods);
+    }
+
+    public override int GetHashCode() {
+      return 785010553 + EqualityComparer<Goods>.Default.GetHashCode(Goods);
+    }
+
+    public override string ToString() {
+      return $"OrderDetail:{Goods},{Quantity}";
+    }
+  }
 }

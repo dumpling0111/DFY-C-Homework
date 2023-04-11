@@ -23,12 +23,12 @@ namespace ShapeFactory
         }
         override public bool isValid()
         {
-            if (width > 0 && height > 0) { return true; }
-            return false;
+            return width > 0 && height > 0;
         }
 
         override public double getArea()
         {
+            if (!isValid()) { throw new InvalidOperationException("该形状无效！"); }
             return width * height;
         }
 
@@ -72,13 +72,12 @@ namespace ShapeFactory
         }
         override public bool isValid()
         {
-            if (a <= 0 || b <= 0 || c <= 0) return false;
-            if (a + b > c && a + c > b && b + c > a) return true;
-            return false;
+            return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a;
         }
 
         override public double getArea()
         {
+            if (!isValid()) { throw new InvalidOperationException("该形状无效！"); }
             //用海伦公式求面积
             double p = (double)(a + b + c) / 2;
             double S2 = Math.Round(p * (p - a) * (p - b) * (p - c), 3);

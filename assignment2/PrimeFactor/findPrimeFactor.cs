@@ -23,8 +23,12 @@ public class findPrimeFactor
 
         public static void findFactor(int n)
         {
+            //加入抛出异常，n不为小于1
+            //使用List保存合适的值
+            //记得因数两个都要保存
             int pfNum = 0;
             Console.Write("质数因子为：");
+            //i*i<n
             for (int i = 2; i <= n/2; i++) {
                 if(n % i != 0) {
                 continue;}
