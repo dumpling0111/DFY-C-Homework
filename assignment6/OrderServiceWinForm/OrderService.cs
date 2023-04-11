@@ -21,7 +21,7 @@ namespace OrderServiceWinForm
         {
             if (orders.Contains(order))
             {
-                //throw new ApplicationException($"the order {order.Id} already exists!");
+                throw new ApplicationException($"the order {order.Id} already exists!");
             }
             orders.Add(order);
         }

@@ -10,8 +10,6 @@ namespace OrderServiceWinForm
     {
 
         private readonly List<OrderDetail> details = new List<OrderDetail>();
-        private int v;
-        private List<OrderDetail> orderDetails;
 
         public int Id { get; set; }
 
@@ -36,20 +34,12 @@ namespace OrderServiceWinForm
             details = new List<OrderDetail>();
             CreateTime = DateTime.Now;
         }
-
-        public Order(int orderId, Customer customer, DateTime creatTime, List<OrderDetail> items)
+        public Order(int id, Customer customer, List<OrderDetail> orderDetails)
         {
-            Id = orderId;
+            Id = id;
             Customer = customer;
-            CreateTime = creatTime;
-            details = (items == null) ? new List<OrderDetail>() : items;
-        }
-
-        public Order(int v, Customer customer, List<OrderDetail> orderDetails)
-        {
-            this.v = v;
-            Customer = customer;
-            this.orderDetails = orderDetails;
+            CreateTime = DateTime.Now;
+            details = (orderDetails == null) ? new List<OrderDetail>() : orderDetails;
         }
 
         public void AddDetails(OrderDetail orderDetail)

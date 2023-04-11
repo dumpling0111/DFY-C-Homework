@@ -22,7 +22,7 @@ namespace OrderServiceWinForm
             order.AddDetails(new OrderDetail(2, new Goods(2, "banana", 50), 61));
             orderService.AddOrder(order);
             Order order2 = new Order(2, new Customer(2, "fei"), new List<OrderDetail>());
-            order2.AddDetails(new OrderDetail(1, new Goods(2, "egg", 200), 10));
+            order2.AddDetails(new OrderDetail(1, new Goods(1, "egg", 200), 10));
             orderService.AddOrder(order2);
             Order order3 = new Order(3, new Customer(3, "yang"), new List<OrderDetail>());
             order3.AddDetails(new OrderDetail(1, new Goods(1, "pear", 666), 20));
